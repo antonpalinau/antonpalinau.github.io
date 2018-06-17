@@ -413,8 +413,16 @@ function checkAnswer(){
 
 
 let startButton = document.getElementById('start-game');
-startButton.addEventListener('click',startGame);
+startButton.addEventListener('click',loading);
 
+function loading(){
+    let startButtonIsClicked = true;
+    window.onload = function(){
+        if(startButtonIsClicked){
+            startGame();
+        }
+    }
+}
 
 function startGame(){
     window.actions.mortalkombat.currentTime = 0.0;
