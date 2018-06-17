@@ -74,9 +74,7 @@ class Health extends Drawable{
                 tr.appendChild(tdCountBeaten);
                 table.appendChild(tr);
                 table.classList.add("table", "table-dark");
-                let temp = 0;
                 for(let i = 0; i < recordArray.length; i++){
-                    temp++;
                     let tr = document.createElement('tr');
                     let tdName = document.createElement('td');
                     let tdCountBeaten = document.createElement('td');
@@ -85,7 +83,7 @@ class Health extends Drawable{
                     tr.appendChild(tdName);
                     tr.appendChild(tdCountBeaten);
                     table.appendChild(tr);
-                    if(temp === recordArray.length){
+                    if(i === recordArray.length - 1){
                         setTimeout(()=>{mainDiv.appendChild(table)},2000);
                         window.imgs.close.addEventListener('click',()=>{table.style.display = 'none'});
                         return;
