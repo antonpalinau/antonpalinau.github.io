@@ -85,7 +85,7 @@ class Health extends Drawable{
                     tr.appendChild(tdName);
                     tr.appendChild(tdCountBeaten);
                     table.appendChild(tr);
-                    if(temp === 5){
+                    if(temp === recordArray.length){
                         setTimeout(()=>{mainDiv.appendChild(table)},2000);
                         window.imgs.close.addEventListener('click',()=>{table.style.display = 'none'});
                         return;
