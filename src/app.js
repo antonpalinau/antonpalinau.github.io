@@ -419,6 +419,7 @@ function loading(){
     let startButtonIsClicked = true;
     window.onload = function(){
         if(startButtonIsClicked){
+            console.log('loaded');
             startGame();
         }
     }
